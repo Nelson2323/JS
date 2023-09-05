@@ -1,0 +1,82 @@
+let user1={
+        name:'Nelson',
+        age:22,
+        login(){
+          console.log('You are logged ' +this.name)
+        },
+        logout(){
+            console.log("You are logged out "+this.name)
+        }}
+let user2={
+        name:'Ramya',
+        age:24,
+        login(){
+        console.log("You are logged in "+this.name)
+        },
+        logout(){
+        console.log("You are logged out "+this.name)
+        }}
+let user3={
+        name:'Ravi',
+        age:21,
+        login(){
+        console.log("You are logged in  "+this.name)
+        },
+        logout(){
+        console.log("You are logged out "+this.name)
+        }}
+
+            user1.login();
+            user1.logout();
+            user2.login();         
+            user2.logout();
+            user3.login();
+            user3.logout();
+
+
+class User{
+
+constructor(name, age){
+this.name=name;
+this.age=age;
+}
+login(){
+    console.log('you are logged in '+this.name, 'Your age is '+this.age)
+}
+logout(){
+  console.log('you are logged out')
+}
+}
+let userOne = new User('Nelson',27);
+let userTwo = new User('Arun',22)
+userOne.login();
+userOne.logout();
+userTwo.login();
+userTwo.logout();
+
+
+class User{
+static numberOfUsers =0;
+  
+  constructor(name, age){
+this.name=name;
+this.age=age;
+User.numberOfUsers++;
+}
+login(){
+    console.log('you are logged in '+this.name, 'Your age is '+this.age)
+}
+logout(){
+  console.log('you are logged out')
+}
+
+static displayTotalUsers(){
+    console.log('Number of Users '+User.numberOfUsers)
+}
+let userOne = new User('Nelson',27);
+let userTwo = new User('Arun',22);
+let userThree = new User('Praveen',21);
+let userFour = new User('Raj',23);
+
+console.log('Number of Users '+User.numberOfUsers)
+User.displayTotalUsers();
