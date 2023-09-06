@@ -27,6 +27,7 @@ let user3={
         console.log("You are logged out "+this.name)
         }}
 
+
             user1.login();
             user1.logout();
             user2.login();         
