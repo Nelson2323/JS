@@ -161,3 +161,62 @@ constructor(temp){
   let temp1 = new Temperature(25)
   temp1.temp=150
   console.log(temp1.temp)
+
+
+//script.js
+
+import C,{fillGas as fill,repair} from './car.js'
+
+let car1 = new C()
+car1.drive()
+fill()
+
+//car.js
+
+//ES6 - modules
+export default class Car{
+    drive(){
+        console.log("Driving")
+    }
+}
+
+export function fillGas(){
+    console.log('Filling Gas')
+}
+
+export function repair(){
+    console.log('Repairing')
+}
+
+// export default Car
+// export {fillGas,repair}
+
+or
+
+//script.js
+
+import C,{fillGas as fill,repair} from './car.js'
+
+let car1 = new C()
+car1.drive()
+fill()
+
+//car.js
+
+//ES6 - modules
+class Car{
+    drive(){
+        console.log("Driving")
+    }
+}
+
+function fillGas(){
+    console.log('Filling Gas')
+}
+
+function repair(){
+    console.log('Repairing')
+}
+
+ export default Car
+ export {fillGas,repair}
