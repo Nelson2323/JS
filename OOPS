@@ -138,7 +138,26 @@ User.prototype.login= function(){
 console.log('hi',this.name)
 console.log('You are logged in')
 }
-
-
 let user1 = new User('Rahim',34)
 user1.login();
+
+//get and set
+
+class Temperature{
+constructor(temp){
+  this._temp=temp;
+}
+  get temp(){
+  return `${this._temp} deg celcius`
+
+  }
+  set temp(temp){
+    if(temp>100)
+     temp=120
+    this._temp=temp
+  }
+
+}
+  let temp1 = new Temperature(25)
+  temp1.temp=150
+  console.log(temp1.temp)
