@@ -1,3 +1,4 @@
+//object
 let user1={
         name:'Nelson',
         age:22,
@@ -33,7 +34,7 @@ let user3={
             user3.login();
             user3.logout();
 
-
+//class
 class User{
 
 constructor(name, age){
@@ -54,11 +55,10 @@ userOne.logout();
 userTwo.login();
 userTwo.logout();
 
-
+//Static variables and static methods
 class User{
-static numberOfUsers =0;
-  
-  constructor(name, age){
+static numberOfUsers =0;  
+constructor(name, age){
 this.name=name;
 this.age=age;
 User.numberOfUsers++;
@@ -80,3 +80,18 @@ let userFour = new User('Raj',23);
 
 console.log('Number of Users '+User.numberOfUsers)
 User.displayTotalUsers();
+
+//Inheritance
+class PaidUser extends User{
+  constructor(name, age){
+  super(name, age)  
+  }
+message(){
+
+  console.log('you have a free 100 GB storage') 
+}
+}
+
+let paidUser1 = new PaidUser('Ramesh',30)
+paidUser1.login()
+paidUser1.message()
