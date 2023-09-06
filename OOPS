@@ -87,11 +87,24 @@ class PaidUser extends User{
   super(name, age)  
   }
 message(){
-
   console.log('you have a free 100 GB storage') 
 }
 }
+let paidUser1 = new PaidUser('Ramesh',30)
+paidUser1.login()
+paidUser1.message()
 
+//overriding
+class PaidUser extends User{
+  constructor(name, age){
+  super(name, age)  
+  }
+message(){
+  console.log('you have a free 100 GB storage') 
+}
+login(){
+    console.log('Thank you')
+}
 let paidUser1 = new PaidUser('Ramesh',30)
 paidUser1.login()
 paidUser1.message()
