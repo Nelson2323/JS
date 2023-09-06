@@ -126,3 +126,18 @@ paidUser1.login()
 paidUser1.message()
 //method chaining
 paidUser1.login().message()
+
+//prototype
+function User(name,age){
+       this.name=name;
+       this.age=age;
+       }
+
+User.prototype.login= function(){
+console.log('hi',this.name)
+console.log('You are logged in')
+}
+
+
+let user1 = new User('Rahim',34)
+user1.login();
