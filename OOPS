@@ -108,3 +108,21 @@ login(){
 let paidUser1 = new PaidUser('Ramesh',30)
 paidUser1.login()
 paidUser1.message()
+
+
+class PaidUser extends User{
+  constructor(name, age){
+  super(name, age)  
+  }
+message(){
+  console.log('you have a free 100 GB storage') 
+}
+login(){
+    console.log('Thank you')
+    return.this
+}
+let paidUser1 = new PaidUser('Ramesh',30)
+paidUser1.login()
+paidUser1.message()
+//method chaining
+paidUser1.login().message()
